@@ -66,6 +66,13 @@
 /* -------------------MEDIA QUERIES (MOBILE)-----------------*/
 
 @media screen and (max-width: 600px) {
+  #experience > h5 {
+    margin-top: 3rem;
+  }
+
+  .container {
+    width: var(--container-width-sm);
+  }
   .experience__container {
     gap: 1rem;
   }
