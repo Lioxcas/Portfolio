@@ -71,6 +71,11 @@
   font-weight: 200;
 }
 
+.scroll__down_icon {
+  margin-left: 10px;
+  margin-bottom: -5px;
+}
+
 /* -------------------MEDIA QUERIES (TABLETS)-----------------*/
 
 @media screen and (max-width: 1024px) {

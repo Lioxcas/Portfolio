@@ -4,6 +4,7 @@ import CTA from "./CTA";
 import ME from "../../../public/me.jpg";
 import styles from "../../../styles/Header.module.css";
 import HeaderSocials from "./HeaderSocials";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const Header = () => {
   return (
@@ -12,13 +13,17 @@ const Header = () => {
         <h5>Hi, I&apos;m</h5>
         <h1>Lionel</h1>
         <HeaderSocials />
-        <h5 className={"text-light"}>Fullstack Developer</h5>
+        <h5 className={"text-light"}>Web Developer</h5>
         <CTA />
         <div className={styles.me}>
           <Image src={ME} alt="Lionel Picture" className={styles.pic} />
         </div>
         <a href="#contact" className={styles.scroll__down}>
-          Scroll Down
+          Go Down!
+          <BsFillArrowRightCircleFill
+            size={"1.5em"}
+            className={styles.scroll__down_icon}
+          />
         </a>
       </div>
     </header>
