@@ -4,7 +4,7 @@
   display: flex;
   gap: 0.8rem;
   border-radius: 3rem;
-  backdrop-filter: blue(15px);
+  backdrop-filter: blur(15px);
   padding: 0.7rem 1.7rem;
   z-index: 2;
   position: fixed;
@@ -27,6 +27,6 @@
 }
 
 .nav a.active {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: var(--color-white);
+  background-color: var(--color-primary);
+  color: var(--color-bg);
 }

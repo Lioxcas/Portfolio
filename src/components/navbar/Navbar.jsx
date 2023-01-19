@@ -8,7 +8,11 @@ const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#");
   return (
     <nav className={styles.nav}>
-      <a href="#" className={activeNav === "#" ? `${styles.active}` : ""}>
+      <a
+        href="#"
+        onClick={() => setActiveNav("#")}
+        className={activeNav === "#" ? `${styles.active}` : ""}
+      >
         <BiHome />
       </a>
       <a
