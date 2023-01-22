@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../../../styles/Portfolio.module.css";
 import { SiGithub } from "react-icons/si";
 import tmdb from "../../../public/assets/tmdb-sample.jpg";
 import divino from "../../../public/assets/divino-sample.jpg";
 import appoint from "../../../public/assets/appointments-sample.jpg";
 import Image from "next/image";
+import en from "../../../public/locale/en";
+import es from "../../../public/locale/es";
+import LangContext from "../context/LangContext";
 
 const Portfolio = () => {
+  const context = useContext(LangContext);
+  const l = context.language === "EN" ? en : es;
+
   const data = [
     {
       id: 1,
@@ -30,7 +36,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
+      <h5>{l.project}</h5>
       <h2>Portfolio</h2>
       <div className={`${styles.container} ${styles.portfolio__container}`}>
         {data.map(({ id, github, title, image }) => {

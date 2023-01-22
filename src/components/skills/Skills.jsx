@@ -1,16 +1,22 @@
 import Image from "next/image";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../../../styles/Skills.module.css";
 import { AiTwotoneStar } from "react-icons/ai";
+import en from "../../../public/locale/en";
+import es from "../../../public/locale/es";
+import LangContext from "../context/LangContext";
 
 const Skills = () => {
+  const context = useContext(LangContext);
+  const l = context.language === "EN" ? en : es;
+
   return (
     <section id="experience">
-      <h5>What skills i have</h5>
-      <h2>Skills</h2>
+      <h5>{l.whatSkills}</h5>
+      <h2>{l.skills}</h2>
       <div className={`${styles.container} ${styles.experience__container}`}>
         <div className={styles.experience__frontend}>
-          <h3>Frontend Development</h3>
+          <h3>{l.frontDev}</h3>
           <div className={styles.experience__content}>
             <article className={styles.experience__details}>
               <AiTwotoneStar className={styles.experience__details_icon} />
@@ -39,7 +45,7 @@ const Skills = () => {
           </div>
         </div>
         <div className={styles.experience__backend}>
-          <h3>Backend Development</h3>
+          <h3>{l.backDev}</h3>
           <div className={styles.experience__content}>
             <article className={styles.experience__details}>
               <AiTwotoneStar className={styles.experience__details_icon} />

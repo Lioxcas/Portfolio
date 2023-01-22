@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../../../styles/Header.module.css";
+import en from "../../../public/locale/en";
+import es from "../../../public/locale/es";
+import LangContext from "../context/LangContext";
 
 const CTA = () => {
+  const context = useContext(LangContext);
+  const l = context.language === "EN" ? en : es;
   return (
     <div className={styles.cta}>
       <a
@@ -11,10 +16,10 @@ const CTA = () => {
         rel="noopener noreferrer"
         className="btn"
       >
-        Download CV
+        {l.cv}
       </a>
       <a href="#contact" className={`${"btn"} ${"btn-primary"}`}>
-        Let&apos;s Talk
+        {l.talk}
       </a>
     </div>
   );

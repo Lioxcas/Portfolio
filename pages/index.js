@@ -6,6 +6,7 @@ import Skills from "../src/components/skills/Skills";
 import Portfolio from "../src/components/portfolio/Portfolio";
 import Contact from "../src/components/contact/Contact";
 import Footer from "../src/components/footer/Footer";
+import LangToggle from "../src/components/language/LangToggle";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <LangToggle />
       <Header />
       <Navbar />
       <About />

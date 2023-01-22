@@ -1,10 +1,16 @@
-import React, { useRef } from "react";
+import React, { useRef, useContext } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "../../../styles/Contact.module.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsWhatsapp, BsFillArrowLeftCircleFill } from "react-icons/bs";
+import en from "../../../public/locale/en";
+import es from "../../../public/locale/es";
+import LangContext from "../context/LangContext";
 
 const Contact = () => {
+  const context = useContext(LangContext);
+  const l = context.language === "EN" ? en : es;
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -21,8 +27,8 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get in Touch</h5>
-      <h2>Contact Me</h2>
+      <h5>{l.getIt}</h5>
+      <h2>{l.contact}</h2>
       <div className={`${styles.container} ${styles.contact__container}`}>
         <div className={styles.contact__options}>
           <article className={styles.contact__option}>
@@ -30,7 +36,7 @@ const Contact = () => {
             <h4>Email</h4>
             <h5>lionelcastrox@gmail.com</h5>
             <a href="mailto:lionelcastrox@gmail.com" target={"blank"}>
-              Send me a message
+              {l.sendMe}
             </a>
           </article>
           <article className={styles.contact__option}>
@@ -38,7 +44,7 @@ const Contact = () => {
             <h4>WhatsApp</h4>
             <h5>+542975070126</h5>
             <a href="https://wa.me/+542975070126" target={"blank"}>
-              Send me a message
+              {l.sendMe}
             </a>
           </article>
         </div>
@@ -46,14 +52,14 @@ const Contact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Your fullname"
+            placeholder={l.yFullName}
             required
             className={styles.input}
           />
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder={l.yEmail}
             className={styles.input}
             required
           />
@@ -62,12 +68,12 @@ const Contact = () => {
             id=""
             cols={30}
             rows={7}
-            placeholder="Your message"
+            placeholder={l.yMessage}
             className={styles.textarea}
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
-            Send Message
+            {l.send}
           </button>
         </form>
       </div>
@@ -76,7 +82,7 @@ const Contact = () => {
           size={"1.5em"}
           className={styles.scroll__up_icon}
         />
-        Go Up!
+        {l.goUp}
       </a>
     </section>
   );
