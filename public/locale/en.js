@@ -8,7 +8,7 @@ export default {
   aboutP1:
     "  Hi guys! I'm a web developer, making my way into the IT world one line of code at the time.",
   aboutP2:
-    "El comienzo de mi viaje por este mundo comenzó a los inicios de 2022, y que año ha sido!.",
+    "My journey through this beautiful world started at the beggining of 2022, and what a year it has been!.",
   aboutP3:
     " I've recently completed a fullstack coding bootcamp at Plataforma5 coding school and learnt more about the PERN/MERN stack, and it was a great place to practice my soft skills aswell. Working with different teams everyday either doing pair programming or with aggile methods like SCRUM.",
   aboutP4:
